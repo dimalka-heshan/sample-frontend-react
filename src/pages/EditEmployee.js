@@ -59,7 +59,7 @@ const EditEmployee = () => {
     event.preventDefault();
 
     try {
-      await axios.put(`http://localhost:5120/api/Employee?Id=${id}`, employee);
+      await axios.post(`http://localhost:5120/api/Employee/${id}`, employee);
       alert("Employee updated successfully!");
       window.history.back();
     } catch (error) {
